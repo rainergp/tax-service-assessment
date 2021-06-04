@@ -1,6 +1,6 @@
 namespace TaxService.Models
 {
-    public class Rate
+    public class TaxRate
     {
         public string Zip { get; set; }
         public string Country { get; set; }
