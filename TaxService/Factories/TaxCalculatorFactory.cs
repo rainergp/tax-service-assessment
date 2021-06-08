@@ -6,9 +6,9 @@ using TaxService.Types;
 
 namespace TaxService.Factories
 {
-    public class TaxCalculatorFactory
+    public static class TaxCalculatorFactory
     {
-        public static ITaxCalculatorService CreateTaxCalculatorService(CalculatorType type)
+        public static ITaxCalculatorService Create(CalculatorType type)
         {
             return type switch
             {
