@@ -12,5 +12,6 @@ namespace TaxService.Models
         public string TaxSource { get; set; }
         public Jurisdictions Jurisdictions { get; set; }
         public Breakdown Breakdown { get; set; }
+
     }
 }

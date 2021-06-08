@@ -4,23 +4,23 @@ using TaxService.Models;
 
 namespace TaxService.Services
 {
-    public class TaxService : ITaxService
+    public class TaxService: ITaxService
     {
-        private readonly ITaxCalculator _taxCalculator;
-
-        public TaxService(ITaxCalculator taxCalculator)
+        private readonly  ITaxCalculatorService _taxCalculatorService;
+        
+        public TaxService(ITaxCalculatorService taxCalculatorService)
         {
-            _taxCalculator = taxCalculator;
+            _taxCalculatorService = taxCalculatorService;
         }
-
+        
         public Task<TaxRate> GetTaxRateByLocation(Location location)
         {
-            return _taxCalculator.GetTaxRateByLocation(location);
+            return _taxCalculatorService.GetTaxRateByLocation(location);
         }
-
-        public Task<Tax> CalculateSalesTaxByOrder(Order order)
+        
+        public Task<SalesTax> CalculateSalesTaxByOrder(Order order)
         {
-            return _taxCalculator.CalculateSalesTaxByOrder(order);
+            return _taxCalculatorService.CalculateSalesTaxByOrder(order);
         }
     }
 }

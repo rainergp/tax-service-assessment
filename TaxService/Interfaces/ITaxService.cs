@@ -6,6 +6,6 @@ namespace TaxService.Interfaces
     public interface ITaxService
     {
         Task<TaxRate> GetTaxRateByLocation(Location location);
-        Task<Tax> CalculateSalesTaxByOrder(Order order);
+        Task<SalesTax> CalculateSalesTaxByOrder(Order order);
     }
 }
