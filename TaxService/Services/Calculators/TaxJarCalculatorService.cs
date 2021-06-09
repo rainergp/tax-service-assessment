@@ -12,20 +12,20 @@ namespace TaxService.Services.Calculators
 {
     public class TaxJarCalculatorService: ITaxCalculatorService
     {
-        private const string ApiKey = "5da2f821eee4035db4771edab942a4cc";
-        private const string ApiUrl = "https://api.taxjar.com/v2";
-
-        private readonly string _ratesUrl = $"{ApiUrl}/rates/";
-        private readonly string _taxesUrl = $"{ApiUrl}/taxes";
+        private readonly string _ratesUrl;
+        private readonly string _taxesUrl;
         
         private readonly HttpClient _httpClient = new HttpClient();
 
         private readonly JsonSerializerSettings _jsonDeserializationSettings;
 
-        public TaxJarCalculatorService()
+        public TaxJarCalculatorService(string apiKey, string apiUrl)
         {
+            _ratesUrl = $"{apiUrl}/rates/";
+            _taxesUrl = $"{apiUrl}/taxes";
+            
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ApiKey);
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
             
             _jsonDeserializationSettings  = new JsonSerializerSettings
             {

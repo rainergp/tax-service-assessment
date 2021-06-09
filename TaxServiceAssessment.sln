@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxService", "TaxService\Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxService.Test", "TaxService.Test\TaxService.Test.csproj", "{D5A0A96F-87D7-4EC6-8FE6-12690039FEE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxService.ConsoleApp", "TaxService.ConsoleApp\TaxService.ConsoleApp.csproj", "{70BA902D-2DE5-4B78-A42D-651875526EFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxService.Client", "TaxService.Client\TaxService.Client.csproj", "{BF80336B-1584-46FE-9B67-4A4E68F0FAF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{D5A0A96F-87D7-4EC6-8FE6-12690039FEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A0A96F-87D7-4EC6-8FE6-12690039FEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A0A96F-87D7-4EC6-8FE6-12690039FEE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70BA902D-2DE5-4B78-A42D-651875526EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70BA902D-2DE5-4B78-A42D-651875526EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70BA902D-2DE5-4B78-A42D-651875526EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70BA902D-2DE5-4B78-A42D-651875526EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF80336B-1584-46FE-9B67-4A4E68F0FAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF80336B-1584-46FE-9B67-4A4E68F0FAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF80336B-1584-46FE-9B67-4A4E68F0FAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF80336B-1584-46FE-9B67-4A4E68F0FAF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

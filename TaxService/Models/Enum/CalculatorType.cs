@@ -1,4 +1,4 @@
-namespace TaxService.Types
+namespace TaxService.Models.Enum
 {
     public enum CalculatorType
     {

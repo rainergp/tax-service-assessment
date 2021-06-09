@@ -2,6 +2,22 @@ namespace TaxService.Models
 {
     public class Rate
     {
+        public override string ToString()
+        {
+            return $"RATE: ( Zip: {Zip} | " +
+                   $"Country: {Country} | " +
+                   $"Country Rate: {CountryRate} | " +
+                   $"State: {State} | " +
+                   $"State Rate: {StateRate} | " +
+                   $"County: {County} | " +
+                   $"County Rate: {CountyRate} | " +
+                   $"City: {City} | " +
+                   $"City Rate: {CityRate} | " +
+                   $"Combined DistrictRate: {CombinedDistrictRate} | " +
+                   $"Combined Rate: {CombinedRate} | " +
+                   $"Freight Taxable: {FreightTaxable} )";
+        }
+
         public string Zip { get; set; }
         public string Country { get; set; }
         public float CountryRate { get; set; }

@@ -2,15 +2,15 @@
 using System.Threading.Tasks;
 using TaxService.Factories;
 using TaxService.Models;
-using TaxService.Types;
+using TaxService.Models.Enum;
 
-namespace TaxService.ConsoleApp
+namespace TaxService.Client
 {
     internal static class Program
     {
-        private static async Task Main(string[] args)
+        private static async Task Main()
         {
-            var taxCalculatorServiceInstance = TaxCalculatorFactory.Create(CalculatorType.Test);
+            var taxCalculatorServiceInstance = TaxCalculatorFactory.Create(CalculatorType.TaxJar);
             var taxCalculatorService = new Services.TaxService(taxCalculatorServiceInstance);
 
             var location = new Location
@@ -22,7 +22,7 @@ namespace TaxService.ConsoleApp
                 Country = "US"
             };
             var taxRate = await taxCalculatorService.GetTaxRateByLocation(location);
-            Console.WriteLine(taxRate.Rate);
+            Console.WriteLine(taxRate.Rate.ToString());
 
             var order = new Order
             {
@@ -42,7 +42,6 @@ namespace TaxService.ConsoleApp
                 Shipping = (float) 1.5
             };
             var salesTax = await taxCalculatorService.CalculateSalesTaxByOrder(order);
-            Console.WriteLine(salesTax.Tax);
-        }
-    }
+            Console.WriteLine(salesTax.Tax.ToString());
+        }    }
 }
