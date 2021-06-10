@@ -34,7 +34,8 @@ namespace TaxService.Tests
             Amount = 15,
             Shipping = (float) 1.5
         };
-
+        
+        // TaxService using TestCalculatorService
         [Fact]
         public async void TaxService_Test_GetTaxRateByLocation_Should_Work()
         {
@@ -77,6 +78,7 @@ namespace TaxService.Tests
             Assert.Null(salesTax.Tax.Breakdown);
         }
         
+        // TaxService using TaxJarCalculatorService
         [Fact]
         public async void TaxService_TaxJar_GetTaxRateByLocation_Should_Work()
         {
