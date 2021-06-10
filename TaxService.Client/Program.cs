@@ -15,10 +15,10 @@ namespace TaxService.Client
 
             var location = new Location
             {
-                Street = "3428 Capri Rd",
-                City = "Palm Beach Gardens",
-                State = "FL",
-                Zip = "33410",
+                Street = "312 Hurricane Lane",
+                City = "Williston",
+                State = "VT",
+                Zip = "05495-2086",
                 Country = "US"
             };
             var taxRate = await taxCalculatorService.GetTaxRateByLocation(location);
@@ -43,5 +43,6 @@ namespace TaxService.Client
             };
             var salesTax = await taxCalculatorService.CalculateSalesTaxByOrder(order);
             Console.WriteLine(salesTax.Tax.ToString());
-        }    }
+        }
+    }
 }

@@ -109,7 +109,7 @@ namespace TaxService.Services.Calculators
             return $"{location.Zip}?{queryParams}";
         }
         
-        //TODO: ValidateLocation & ValidateOrder must be improved 
+        //TODO: ValidateLocation & ValidateOrder must be improved (this is just a sample)
         private static void ValidateLocation(Location location)
         {
             if (location == null)

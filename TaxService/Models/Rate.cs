@@ -13,7 +13,7 @@ namespace TaxService.Models
                    $"County Rate: {CountyRate} | " +
                    $"City: {City} | " +
                    $"City Rate: {CityRate} | " +
-                   $"Combined DistrictRate: {CombinedDistrictRate} | " +
+                   $"Combined District Rate: {CombinedDistrictRate} | " +
                    $"Combined Rate: {CombinedRate} | " +
                    $"Freight Taxable: {FreightTaxable} )";
         }
